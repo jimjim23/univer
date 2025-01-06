@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <queries>
+        <package android:name="com.google.android.gms" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".school.analytics.SchoolAnalyticsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCms1a7SFF-oyipZ33BDMxcBRT--i1KPGI" />
+
+        <activity
+            android:name=".school.location.SchoolLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.create.CreateSchoolActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolInformationNavigation.SchoolInformationNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.SchoolActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgotPassword.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".changePassword.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".filters.FiltersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".faq.FAQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".matched.MatchedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.profile.SchoolProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolCourses.editCourse.EditCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolCourses.createCourse.CreateCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolFAQs.editFAQ.EditFAQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolFAQs.createFAQ.CreateFAQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolFAQs.SchoolFAQsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolMissionVision.SchoolMissionVisionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolCourses.SchoolCoursesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolImages.SchoolImagesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".school.schoolInformation.SchoolInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.editAccount.EditAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".accountSetup.AccountSetupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registration.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registration.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="universitinder.page.link"
+                    android:scheme="https"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
